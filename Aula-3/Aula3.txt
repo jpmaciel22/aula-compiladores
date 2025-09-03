@@ -1,0 +1,37 @@
+=======
+O QUE É UM COMPILADOR?
+=======
+Pré processamento: Inclui arquivos que estão no cabeçalho do programa fonte. Em C: #include <stdio.h>
+
+Montador: Porduz um código de máquina realocável ou coigo de montagem(versão mnemônica do código de máquina) Ex: b=a+2
+
+MOV a,R1
+ADD #2, R1
+MOV R1,b
+
+Compilador é um programa que traduz de programa fonte para programa intermediário para então ser transformado em um executador.
+
+Interpretador executa as funções em runtime, e não gera um executador. Porém, seus erros já acontecem enquanto executados, no compilador isso não acontece.
+
+Lexer: O coimpilador identifica e classifica os elemntos básicos (tokens) do código-fonte.
+Parser ( Análisador Sintético ): Verifica a estrutura gramatical do código-fonte de acordo com a linguagem de programação.
+Análise Semântica: Verifica o significado e coerência do código-fonte com as regras da linguagem.
+
+==========
+ANÁLISE LÉXICA:
+==========
+Identificação de tokens: O compilador reconhece os elementos básicos do código fonte, como palavras-chave, identificadores, números, símbolos, etc.
+Classificação dos tokens: Cada token é classificado de acordo com sua categoria gramatical, como variável, função, operador, etc.
+Remoção de Espaços em branco: Espaços, tabulações e quebras de linha são ignorados nessa etapa.
+
+==========
+ANÁLISE SINTÁTICA:
+==========
+Construção da árvore sintática: O compilador constrói uma representação hierárquica refletindo sua estrutura gramatical.
+Verificação da estrutura: Verifica se o código-fonte está de acordo com as regras da linguagem de programação.
+Detecção de Erros: Identifica e reporta quaisuqer problemas na estrutura do código-fonte
+
+==========
+ANÁLISE SEMÂNTICA
+==========
+

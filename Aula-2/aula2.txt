@@ -1,0 +1,34 @@
+== REGEX SYNTAX ==
+
+. | qualquer char
+* | zero ou mais ocorrencias do elemento anterior
++ | 1 ou mais ocorrencias do elemento antereior
+? | 0 ou 1 ocorrencia do elemento anterior
+^ | marca o inicio de uma linha ou negacao dentro de colchetes
+$ | indica o final de uma linha
+| | significa OU este expressoes sendo um operador 
+[] | define um conjunto de caracteres possiveis em uma posicao
+{n} | exatamente n ocorrencias
+{n,} | no minimo n ocorrencias
+{n,m} | entre n e m ocorrencias
+() | agrupa expressoes
+(?:padrao) | grupo nao capturante
+\d | digitos
+\w | caracteres alfanumericos
+\s | espacos em branco
+para capturar literais ao inves de simbolos regex usa-se \ antes, exemplo: \. para capturar pontos
+ao inves de utilizar a expressao .
+
+verificacao de nome de variavel e.g: ^[a-zA-z_][\w]*$
+
+A) Encontrar datas no formato dd/mm/aaaa:
+[0-9]\d{2}\/[0-9]\d{2}\/\d{4}
+
+B) Aniversariantes do dia 30/09 de qualquer ano:
+^30/09/\d{4}
+
+C) Mascara para validar CPF:
+\d{3}\.\d{3}\.\d{3}-\d{2}
+
+D) Emails com final .com.br:
+(.*)@[^.]+\.com\.br$

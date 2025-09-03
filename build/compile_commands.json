@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/ocelot/Compiladores/build",
+  "command": "/usr/bin/clang++ -g -std=gnu++17 -o CMakeFiles/postfix.dir/parser.cpp.o -c /home/ocelot/Compiladores/Parser-Preditivo/parser.cpp",
+  "file": "/home/ocelot/Compiladores/Parser-Preditivo/parser.cpp"
+},
+{
+  "directory": "/home/ocelot/Compiladores/build",
+  "command": "/usr/bin/clang++ -g -std=gnu++17 -o CMakeFiles/postfix.dir/postfix.cpp.o -c /home/ocelot/Compiladores/Parser-Preditivo/postfix.cpp",
+  "file": "/home/ocelot/Compiladores/Parser-Preditivo/postfix.cpp"
+}
+]
