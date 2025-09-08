@@ -1,0 +1,47 @@
+=======
+ANALISADOR LEXICO PT.2
+=======
+
+Lexema: O lexema é a unidade minima de significado em uma língua. Sequencia de caracteres do programa fonte. Cada conjunto de caractere válido
+Ex: +,-,(,int,soma...
+
+Tokens: Lexema que segue padrão válido. Resultado da classificação. Par: Nome do token e atributo. Ex: if ( lexema if => token palavra reservada IF ), soma ( lexema soma => é palavra reservada ? Não => identificador )
+
+Padrão: Descrição da forma que os lexemas podem assumir. Regras do que é aceito na linguagem. Ex: if( Palavra reservada if )
+
+Tabela de símbolos: Estrutura de dados que contém um registro para cada identificador e atributos. Não é uma etapa, mas todas as análises tem relação com a tabela de símbolos.
+
+Funções do Analisador Léxico: Ler os caracteres do codigo-fonte e remover espaços em branco, tabulações e comentários, agrupar os caracteres em lexemas e classficá-los, detectar erros e relacionar com a posição no programa. Gerar a lista de tokens(marcas), manipular a tabela de símbolos.
+
+Abordagens de uma Análise Lexica:
+ - Análise léxica completa: toda a análise léxica é realizada de uma vez.
+   - Lê caracteres
+   - Separa em lexemas
+   - Classifica em tokens
+   - Passa para a análise sintática a lista de símbolos completa de tokens
+   - Desvantagens: Eficiência. Ex: esqueceu de fechar um parentese no inicio de uma função.
+ - Análise léxica por token: abordagem mais utilizada. Quem orquestra é o analisador sintático.
+   
+Definição de um token: Tokens são as unidades básicas de análise de um programa de computador. Eles representam os elementos léxicos reconhecidos pelo analisador, como palavras-chave, identificadores, constantes e operadores.
+
+Padrões de tokens: Cada token possui um padrão específico que o define, como uma sequência de caracteres, um número ou uma palavra-chave. Os tokens possuem atributos e são armazenados na tabela de símbolos pelo analisador léxico.
+
+Atributos dos tokens: Atributos são adicionados aos tokens quando mais de um lexema "casa" com um mesmo padrão:
+	Números: (Todo numero é agrupado como number)
+		Facilita a construção do analisador sintatico
+		Mas na hora de gerar o codigo tenho que identificar qual o numero e o valor do numero vai como atributo do token number
+	Identificadores: (Entrada para a tabela de simbolos)
+		Variáveis são agrupadas como identificadores.
+		Salva na tabela de símbolos. A posição na tabela de símbolos é um atributo na tabela de símbolos.
+	Literais (cadeia de string, boolean)
+	Operadores agrupados (ex: Comparacao)
+	O nome do token é usado na análise sintática e os atributos nas etapas posteriores.
+
+===================
+EXEMPLO:
+float valor = taxa * 100
+tokens: (palavra reservada, float), (ID, 1), (Atribuicao, =), (ID, 2), (Oper.Arit., *), (Number, 100) (delimitador, ;)
+tabela de simbolos: (ID, 1, valor), (ID, 2, taxa)
+===================
+
+
