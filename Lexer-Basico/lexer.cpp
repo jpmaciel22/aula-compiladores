@@ -74,7 +74,7 @@ Token Lexer::Scan(){
     }
 
     // operadores ( e caracteres nao alfanumericos isolados)
-    Token t {peek};
+    Token t = Token{peek}; // Token t {peek}
     peek = ' ';
 
     //DEBUG: exibe o token para o caractere:
