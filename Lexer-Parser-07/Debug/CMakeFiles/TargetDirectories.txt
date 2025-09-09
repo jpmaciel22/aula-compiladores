@@ -1,3 +1,0 @@
-/home/ocelot/Compiladores/Lexer-Parser-07/debug/CMakeFiles/tradutor.dir
-/home/ocelot/Compiladores/Lexer-Parser-07/debug/CMakeFiles/edit_cache.dir
-/home/ocelot/Compiladores/Lexer-Parser-07/debug/CMakeFiles/rebuild_cache.dir
