@@ -1,3 +1,0 @@
-/home/ocelot/Compiladores/build/CMakeFiles/postfix.dir
-/home/ocelot/Compiladores/build/CMakeFiles/edit_cache.dir
-/home/ocelot/Compiladores/build/CMakeFiles/rebuild_cache.dir
