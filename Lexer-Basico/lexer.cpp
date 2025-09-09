@@ -56,7 +56,7 @@ Token Lexer::Scan(){
             switch(pos -> second.tag){
                 case TRUE: cout << "<TRUE," << pos->second.name << "> "; break;
                 case FALSE: cout << "<FALSE," << pos->second.name << "> "; break;
-                default: cout << "<ID," << pos->second.name << "> "; break;
+                default: cout << "<ID - JÁ EXISTENTE," << pos->second.name << "> "; break;
             }
             //retorna o TOKEN ID, o primeiro elemento é a string e o segundo o token.
             return pos-> second;
