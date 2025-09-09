@@ -29,5 +29,19 @@ struct Id:public Token{
 };
 
 class Lexer{
+    private:
+    //guarda ultimo token retornado
+        struct{
+            Token t;
+            Num n;
+            Id i;
+        }token; //por isso que temos varios construtores vazios.
 
+        int line = 1;
+        char peek;
+        unordered_map<string, Id> id_table;
+    public:
+        Lexer();
+        int Lineno();
+        Token * Scan(); //scan retornara um ponteiro para um dos elementos do utlimo token achado
 };
