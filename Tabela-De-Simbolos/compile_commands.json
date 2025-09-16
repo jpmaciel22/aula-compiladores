@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/ocelot/Compiladores/Tabela-De-Simbolos",
+  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/tradutor.dir/lexer.cpp.o -c /home/ocelot/Compiladores/Tabela-De-Simbolos/lexer.cpp",
+  "file": "/home/ocelot/Compiladores/Tabela-De-Simbolos/lexer.cpp"
+},
+{
+  "directory": "/home/ocelot/Compiladores/Tabela-De-Simbolos",
+  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/tradutor.dir/parser.cpp.o -c /home/ocelot/Compiladores/Tabela-De-Simbolos/parser.cpp",
+  "file": "/home/ocelot/Compiladores/Tabela-De-Simbolos/parser.cpp"
+},
+{
+  "directory": "/home/ocelot/Compiladores/Tabela-De-Simbolos",
+  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/tradutor.dir/symtable.cpp.o -c /home/ocelot/Compiladores/Tabela-De-Simbolos/symtable.cpp",
+  "file": "/home/ocelot/Compiladores/Tabela-De-Simbolos/symtable.cpp"
+},
+{
+  "directory": "/home/ocelot/Compiladores/Tabela-De-Simbolos",
+  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/tradutor.dir/error.cpp.o -c /home/ocelot/Compiladores/Tabela-De-Simbolos/error.cpp",
+  "file": "/home/ocelot/Compiladores/Tabela-De-Simbolos/error.cpp"
+},
+{
+  "directory": "/home/ocelot/Compiladores/Tabela-De-Simbolos",
+  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/tradutor.dir/tradutor.cpp.o -c /home/ocelot/Compiladores/Tabela-De-Simbolos/tradutor.cpp",
+  "file": "/home/ocelot/Compiladores/Tabela-De-Simbolos/tradutor.cpp"
+}
+]
