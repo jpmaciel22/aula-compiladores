@@ -1,0 +1,47 @@
+# Remova a recursao a esquerda da gramatica anterior
+
+# ------------------- MINHA SOLUCAO MAS ESTA ERRADA
+# exprsm ::= exprdm + exprsm
+#           | exprdm - exprsm
+#           | exprdm
+#           | EPSILON
+
+# exprdm ::= digi / exprdm
+#          | digi * exprdm
+#          | digi
+
+# digi ::= 0 | 1 | ... | 9 | ( exprsm )
+
+#-----------------------------------
+
+# forma padrao de solucao:
+# A -> Aa | b
+# 
+# A -> bR
+# R -> aR | NULL 
+
+expr ::= expr2 exprsm
+exprsm ::= + expr2 exprsm
+         | - expr2 exprsm
+         | EPSILON
+
+expr2 ::= digi exprdm
+
+exprdm ::= * digi exprdm
+          | / digi exprdm
+          | EPSILON
+
+digi ::= 0 | 1 | ... | 9 | (expr)
+
+expr2 exprsm
+expr2 + expr2 exprsm
+expr2 + expr2 ( EPSILON )
+expr2 + digi exprdm
+expr2 + 1 * digi exprdm
+expr2 + 1 * digi ( EPSILON )
+expr2 + 1 * 3
+digi exprdm + 1 * 3
+4 exprdm + 1 * 3
+4 + 1 * 3
+
+

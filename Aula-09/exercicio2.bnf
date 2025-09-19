@@ -1,0 +1,39 @@
+(*
+Mostre como representar a precedencia em operadores logicos e relacionais
+
+x && y > 6
+y > x > 8
+x > 2 || !(y < 2) && y > z
+*)
+
+
+(*
+expr && expr
+expr || expr
+
+!expr
+
+expr > expr
+expr >= expr
+expr < expr
+expr <= expr
+expr != expr
+expr == expr
+*)
+
+log ::= log AND neg
+      | log OR neg
+      | neg
+
+neg ::= NOT rel 
+      | rel 
+
+rel ::= rel GREATER term
+      | rel GREATEREQ term
+      | rel LOWER term
+      | rel LOWEREQ term
+      | rel DIFF term
+      | rel EQ term
+      | term
+
+term ::= "(" log ")" | ID | NUM  

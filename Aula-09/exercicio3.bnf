@@ -1,0 +1,21 @@
+(*
+Construa um esquema de tradução para converter expressões aritméticas da notação pós-fixada 
+para a infixada.
+
+
+expr -> expr digi +
+       | expr digi -
+       | expr digi *
+       | expr digi /
+       | digi
+
+digi -> 0...9
+*)
+
+expr ::= {print("(");} expr {print(+);} digi + {print(")");}
+       | {print("(");} expr {print(-);} digi - {print(")");}
+       | {print("(");} expr {print(\*);} digi * {print(")");}
+       | {print("(");} expr {print(/);} digi / {print(")");}
+       | digi 
+
+digi ::= 0 {print(0);}| 1 {print(1);}| ... | 9 {print(9);}
