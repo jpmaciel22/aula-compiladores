@@ -1,0 +1,38 @@
+(* Exemplo:
+
+class Ponto{
+	private:
+		int x;
+		int y;
+	public:
+		Ponto();
+}
+
+*)
+
+(* Exercicio: Escreva uma gramática para representar declarações de classes *)
+
+program ::= CLASS ID "{" class_dcls "}" ";"
+
+class_dcls ::= class_dcl class_dcls
+			 | EPSILON
+
+class_dcl ::= ACCESS_TYPE ":" dcls
+
+# access_type ::= PRIVATE 
+#                | PUBLIC
+# 			   | PROTECTED
+
+dcls ::= dcl dcls
+       | EPSILON
+
+dcl ::= type ID ";"
+       | method_type ID "(" params ")" ";"
+	   | EPSILON
+
+type ::= INT | FLOAT | CHAR
+method_type ::= INT | FLOAT | CHAR | VOID | EPSILON
+
+params ::= param params | param params ","
+
+param ::= TYPE ID | EPSILON
