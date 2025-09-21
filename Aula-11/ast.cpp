@@ -330,12 +330,26 @@ While::While(Expression *e, Statement *s) :
     expr(e), 
     stmt(s) 
 {
-    
+    if(expr->type != ExprType::BOOL)
+    {
+        stringstream ss;
+        ss << "expressão condicional \'" << expr->ToString() << "\' não booleana";
+        throw SyntaxError{scanner->Lineno(), ss.str()};
+    }
+
+    after = NewLabel();
+    begin = NewLabel();
 }
 
 void While::Gen()
-{
-    
+{   
+    cout << "L " << begin << ":" << endl;
+    Expression * n = Rvalue(expr);
+    cout << "\tifFalse " << n->ToString() << " goto L " << after << endl;
+    stmt->Gen();
+    cout << "goto L " << begin << endl;
+    cout << " L" << after << ":" << endl;
+
 }
 
 // --------
