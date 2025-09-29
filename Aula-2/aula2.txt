@@ -19,7 +19,7 @@ $ | indica o final de uma linha
 para capturar literais ao inves de simbolos regex usa-se \ antes, exemplo: \. para capturar pontos
 ao inves de utilizar a expressao .
 
-verificacao de nome de variavel e.g: ^[a-zA-z_][\w]*$
+verificacao de nome de variavel e.g: ^([a-zA-z_][\w]+)$
 
 A) Encontrar datas no formato dd/mm/aaaa:
 [0-9]\d{2}\/[0-9]\d{2}\/\d{4}
@@ -32,3 +32,17 @@ C) Mascara para validar CPF:
 
 D) Emails com final .com.br:
 (.*)@[^.]+\.com\.br$
+
+
+email mais restritivo:
+^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+
+cpf com ou sem ponto
+^(\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11})$
+
+cep 
+^(\d{2}\.\d{3}-\d{3})$
+
+data
+^(\d{2}\/\d{2}\/\d{4})$
+
