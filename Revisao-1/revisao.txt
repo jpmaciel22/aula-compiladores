@@ -1,0 +1,46 @@
+<type, "int"> <id, 1> <ATTR> <num, 2> <;>
+int x = 100;
+
+==================
+| x | id | 1 |
+| 100 | int | 2 |
+==================
+
+
+<pr, public> <pr, static> <type, "void"> <id, 1> <LP> <id, 9><[> <]> <id, 2> <LB>
+<type, "int"> <id,3> <ATTR> <num, 10> <,> <id, 4> <ATTR> <num, 4> <;>
+<type, "float"> <id, 5> <ATTR> <id,3> </> <id,4> <;>
+<id, 6><.><id, 7><.><id, 8> <LP> <id, 5> <RP> <;>
+<RB>
+
+public static void main(String [] args) {
+	int a = 10, b = 4;
+	float c = a / b;
+	System.out.print(c);
+}
+
+==================
+| main | func | 1 |
+| args | param | 2 |
+| a | int | 3 |
+| b | int | 4 |
+| c | float | 5 |
+| System | class | 6 |
+| out | attribute | 7 |
+| print | func | 8 |
+| String | class | 9 |
+==================
+
+
+<pr, while> <id, 1> <rel, "<"> <num, 10> <pr, do>
+<id,1> <ATTR> <id,2> <ari, +> <id,1> <;>
+
+while indice < 10 do
+	indice := total + indice;
+
+=================
+| indice | int | 1 |
+| total | int | 2 |
+=================
+
+
