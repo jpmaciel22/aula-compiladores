@@ -32,3 +32,17 @@ C) Mascara para validar CPF:
 
 D) Emails com final .com.br:
 (.*)@[^.]+\.com\.br$
+
+
+email mais restritivo:
+^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+
+cpf com ou sem ponto
+^(\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11})$
+
+cep 
+^(\d{2}\.\d{3}-\d{3})$
+
+data
+^(\d{2}\/\d{2}\/\d{4})$
+
