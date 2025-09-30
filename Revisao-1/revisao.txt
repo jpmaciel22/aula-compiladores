@@ -6,7 +6,7 @@ int x = 100;
 ==================
 
 
-<pr, public> <pr, static> <type, "void"> <id, 1> <LP> <id, 9><[> <]> <id, 2> <LB>
+<pr, public> <pr, static> <type, "void"> <id, 1> <LP> <id, 9><[> <]> <id, 2> <RP> <LB>
 <type, "int"> <id,3> <ATTR> <num, 10> <,> <id, 4> <ATTR> <num, 4> <;>
 <type, "float"> <id, 5> <ATTR> <id,3> </> <id,4> <;>
 <id, 6><.><id, 7><.><id, 8> <LP> <id, 5> <RP> <;>
